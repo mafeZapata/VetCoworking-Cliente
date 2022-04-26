@@ -12,14 +12,14 @@ const Reservas = () => {
           minHeight: "400px",
           backgroundImage:
             "url(" +
-            require("../../assets/img/theme/terneraslevante.jpeg").default +
+            require("../../assets/img/theme/background.jpg").default +
             ")",
           backgroundSize: "cover",
           backgroundPosition: "center top",
         }}
       >
         {/* Mask */}
-        <span className="mask bg-gradient-success opacity-8" />
+        <span className="mask bg-gradient-info opacity-8" />
         {/* Header container */}
         <Container className="d-flex align-items-center" fluid>
           <Row>
@@ -33,7 +33,7 @@ const Reservas = () => {
                   <i className="ni ni-bold-left" />
                 </Button>
               </div>
-              <h1 className="display-2 text-white">Terneras</h1>
+              <h1 className="display-2 text-white">Reservas</h1>
             </Col>
           </Row>
         </Container>

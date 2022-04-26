@@ -15,38 +15,35 @@ import {
 } from "reactstrap";
 
 
-import TernerasHeader from "../../components/Headers/Reservas.js";
+import ReservasHeader from "../../components/Headers/Reservas.js";
 export default class Terneras extends React.Component {
 
 
   state = {
-    listaTerneras: [],
-    Ternera: {
-      id_Tbovinos: "",
-      chapeta: "",
-      id_tipo: "",
-      nombre: "",
-      id_raza: "",
-      genetica: "",
-      finca: ""
+    listaReservas: [],
+    Reservas: {
+      id_Reservas: "",
+      fechaInicio: "",
+      fechaFin: "",
+
     }
   }
   
   componentDidMount() {
-    this.listarTerneras();
+    this.listarReservas();
     localStorage.setItem("edit", "");
   }
   
   
-  listarTerneras= () => {
+  listarReservas= () => {
     axios
-        .get("http://vache-server.herokuapp.com/bovinos/tipo/6")
+        .get("http://vetcoworking.azurewebsites.net​/api​/bookings​/get​/all")
         .then(response => {
             console.log(response)
             this.setState({
-              listaTerneras: response.data.info
+              listaReservas: response.data.info
             });
-            console.log("Registro bovinos")
+            console.log("ver reservas")
             console.log(this.state.control);
         })
         .catch(error => {
@@ -54,21 +51,17 @@ export default class Terneras extends React.Component {
         });
   }
   
-  eliminarTerneras= async (chapeta) => {
-  const res = await axios.delete('http://vache-server.herokuapp.com/bovinos/' + chapeta);
+  eliminarReservas= async (id_Reservas) => {
+  const res = await axios.delete('http://vetcoworking.azurewebsites.net/api/bookings/delete/' + id_Reservas);
   console.log(res);
-  this.listarTerneras();
+  this.listarReservas();
   };
   
-  cargarInformacion = (Ternera) => {
-    console.log("ESTE ES"+Ternera);
-     localStorage.setItem("id_Tbovinos",Ternera.id_Tbovinos);
-     localStorage.setItem("chapeta",Ternera.chapeta);
-     localStorage.setItem("id_tipo",Ternera.id_tipo);
-     localStorage.setItem("nombre",Ternera.nombre);
-     localStorage.setItem("id_raza",Ternera.id_raza);
-     localStorage.setItem("genetica",Ternera.genetica);
-     localStorage.setItem("finca",Ternera.finca);
+  cargarInformacion = (Reservas) => {
+    console.log("ESTE ES"+Reservas);
+     localStorage.setItem("id_Reservas",Reservas.id_Reservas);
+     localStorage.setItem("fechaInicio",Reservas.fechaInicio);
+     localStorage.setItem("fechaFin",Reservas.fechaFin);
      localStorage.setItem("edit","si");
   }
   
