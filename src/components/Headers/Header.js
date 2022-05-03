@@ -35,13 +35,6 @@ const Header = () => {
                             Reserva de consultorios
                         </CardTitle>
                         <img src={imagenes.reserva} alt="Reservas" style = {{ height:150, width: 150,}}/>
-                        { /* </div>
-                       <Col className="col-auto">
-                          <div className="icon icon-shape bg-info text-white rounded-circle shadow">
-                            <i className="fas fa-horse" />
-                          </div>  
-                          
-                        </Col>*/}
                         </div>
                       </Row>
                     </CardBody>
@@ -63,12 +56,6 @@ const Header = () => {
                           Pacientes
                         </CardTitle>
                         <img src={imagenes.clientes} alt="Clientes" style = {{ height:150, width: 150,}}/>
-                      {/*</div>
-                      <Col className="col-auto">
-                        <div className="icon icon-shape bg-success text-white rounded-circle shadow">
-                          <i className="fas fa-chart-bar" />
-                        </div>
-                      </Col>*/}
                       </div>
                     </Row>
                   </CardBody>
@@ -80,16 +67,6 @@ const Header = () => {
           </div>
           <br/>
           <br/>
-         { /*<div className="text-left">
-              <Button
-                className ="btn-white btn-icon mr-6"
-                color = 'danger' 
-                to ="/admin/insertarBovino" tag={Link}
-              >
-                 <i className="ni ni-fat-add" />
-                <span className="btn-inner--text" >Añadir Nuevo Bovino</span>
-              </Button>           
-                    </div>*/}
         </Container>
       </div>
     </>

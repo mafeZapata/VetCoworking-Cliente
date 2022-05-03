@@ -2,7 +2,7 @@
 import Inicio from "./views/pages/inicio.js";
 import Reservas from "../src/views/pages/Reservas.js";
 import Login from "../src/views/pages/Login.js";
-import Register from "../src/views/pages/Register.js";
+import Registro from "../src/views/pages/Register.js";
 import Pacientes from "../src/views/pages/Pacientes.js";
 
 
@@ -35,8 +35,8 @@ var routes = [
     layout: "/auth",
   },
   {
-    path: "/register",
-    component: Register,
+    path: "/registro",
+    component: Registro,
     layout: "/auth",
 },
   

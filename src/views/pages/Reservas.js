@@ -16,6 +16,7 @@ import {
 
 
 import ReservasHeader from "../../components/Headers/Reservas.js";
+import Reservas from "../../components/Headers/Reservas.js";
 export default class Terneras extends React.Component {
 
 
@@ -66,7 +67,7 @@ export default class Terneras extends React.Component {
   }
   
   render() {
-    var raza = "";
+    var Reserva = "";
     return (
       <>
         <TernerasHeader />
@@ -78,31 +79,20 @@ export default class Terneras extends React.Component {
                 <Table className="align-items-center table-flush" responsive>
                   <thead className="thead-light">
                     <tr>
-                      <th scope="col">Chapeta</th>
-                      <th scope="col">Tipo</th>
-                      <th scope="col">Bovino</th>
-                      <th scope="col">Raza</th>
-                      <th scope="col">Finca</th>
-                      <th scope="col">Acciones</th>
+                      <th scope="col">Reserva</th>
+                      <th scope="col">Fecha inicio</th>
+                      <th scope="col">Fecha finalización</th>
+                
                     </tr>
                   </thead>
                   <tbody>
-                  {this.state.listaTerneras.map((Ternera, i) => {
-                    if (Ternera.id_raza == 1)
-                    raza = "Jersey"
-                    else if (Ternera.id_raza == 2)
-                    raza = "Holstein"
-                    else if (Ternera.id_raza == 3)
-                    raza = "Jerhol"
-                    else if (Ternera.id_raza == 4)
-                    raza = "PardoSuiza"
             return (
               <tr>
-                <td>{Ternera.chapeta}</td>
-                <td>Ternera</td>
-                <td>{Ternera.nombre}</td>
-                <td>{raza}</td>
-                <td>{Ternera.finca}</td>
+                <td>{Reservas.id_Reservas}</td>
+                <td>Reserva</td>
+                <td>{Reservas.fechaInicio}</td>
+                <td>{Reservas.fechaFin}</td>
+    
                 <td className="text-right">
                         <UncontrolledDropdown>
                           <DropdownToggle
@@ -119,30 +109,23 @@ export default class Terneras extends React.Component {
                         
                             <DropdownItem
                               href="/admin/actualizarBovino/"
-                              key={i} onClick={this.cargarInformacion.bind(this,Ternera)} 
+                              key={i} onClick={this.cargarInformacion.bind(this,Reservas)} 
                             >
                                   <i className="ni ni-ui-04" />
                               Actualizar
                             </DropdownItem>
                             <DropdownItem
-                              onClick={() => this.eliminarTerneras(Ternera.chapeta)}
+                              onClick={() => this.eliminarReservas(Reservas.id_Reservas)}
                             >
                                 <i className="ni ni-fat-remove" />
                              Eliminar
-                            </DropdownItem>
-                            <DropdownItem
-                            href="/admin/verGenealogia/"
-                            key={i} onClick={this.cargarInformacion.bind(this, Ternera)}
-                            >
-                            <i className="ni ni-map-big" />
-                             Ver Genealogia 
                             </DropdownItem>
                           </DropdownMenu>
                         </UncontrolledDropdown>
                       </td>
               </tr>
             );
-          })}         
+            )         
                   </tbody>
                 </Table>
               </Card>

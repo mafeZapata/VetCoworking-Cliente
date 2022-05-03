@@ -2,7 +2,7 @@ import TernerasLevante from "./views/pages/Reservas.js"
 import TernerasDestetadas from "./views/pages/Pacientes.js";
 import actualizarBovino from "./views/pages/actualizarBovino.js";
 import Profile from "../src/views/pages/Profile.js";
-import Register from "./views/pages/Register.js";
+import Registro from "./views/pages/Register.js";
 import Login from "./views/pages/Login.js";
 
 
@@ -40,8 +40,8 @@ var routes2 = [
         layout: "/auth",
     },
     {
-        path: "/register",
-        component: Register,
+        path: "/registro",
+        component: Registro,
         layout: "/auth",
     },
     
