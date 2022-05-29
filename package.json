@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Josewp10/vache-client.git"
+    "url": "git+https://github.com/mafeZapata/VetCoworking-Cliente.git"
   },
   "keywords": [
     "react",
