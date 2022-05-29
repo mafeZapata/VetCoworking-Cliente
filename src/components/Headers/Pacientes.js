@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col, Button } from "reactstrap";
 
 
-const TernerasDestetadas = () => {
+const Pacientes = () => {
   return (
     <>
       <div
@@ -13,7 +13,7 @@ const TernerasDestetadas = () => {
           minHeight: "300px",
           backgroundImage:
             "url(" +
-            require("../../assets/img/theme/destetadas.jpeg").default +
+            require("../../assets/img/theme/background.jpg").default +
             ")",
           backgroundSize: "cover",
           backgroundPosition: "center top",
@@ -34,7 +34,7 @@ const TernerasDestetadas = () => {
                   <i className="ni ni-bold-left" />
                 </Button>
               </div>
-              <h1 className="display-2 text-white">Terneras Destetadas</h1>
+              <h1 className="display-2 text-white">Pacientes</h1>
             </Col>
           </Row>
         </Container>
@@ -43,4 +43,4 @@ const TernerasDestetadas = () => {
   );
 };
 
-export default TernerasDestetadas;
+export default Pacientes;

@@ -12,7 +12,7 @@ const UserHeader = () => {
           minHeight: "600px",
           backgroundImage:
             "url(" +
-            require("../../assets/img/theme/background.png").default +
+            require("../../assets/img/theme/background.jpg").default +
             ")",
           backgroundSize: "cover",
           backgroundPosition: "center top",
@@ -24,7 +24,7 @@ const UserHeader = () => {
         <Container className="d-flex align-items-center" fluid>
           <Row>
             <Col lg="7" md="10">
-              <h1 className="display-1 text-white">Hola nombre del veterinario</h1>
+              <h1 className="display-1 text-white">Hola Mario El veterinario</h1>
               <p className="display-5 text-white mt-0 mb-5">
                 Que gusto tenerte de vuelta
               </p>

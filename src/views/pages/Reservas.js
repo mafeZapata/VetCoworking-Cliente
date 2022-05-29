@@ -70,8 +70,7 @@ export default class Terneras extends React.Component {
     var Reserva = "";
     return (
       <>
-        <TernerasHeader />
-        {/* Page content */}
+        <ReservasHeader />
         <Container className="mt--7" fluid>
         <Row>
             <div className="col">
@@ -101,19 +100,12 @@ export default class Terneras extends React.Component {
                             role="button"
                             size="sm"
                             color=""
-                            onClick={(e) => e.preventDefault()}
+                            onClick={(i) => i.preventDefault()}
                           >
                             <i className="fas fa-ellipsis-v" />
                           </DropdownToggle>
                           <DropdownMenu className="dropdown-menu-arrow" right>
                         
-                            <DropdownItem
-                              href="/admin/actualizarBovino/"
-                              key={i} onClick={this.cargarInformacion.bind(this,Reservas)} 
-                            >
-                                  <i className="ni ni-ui-04" />
-                              Actualizar
-                            </DropdownItem>
                             <DropdownItem
                               onClick={() => this.eliminarReservas(Reservas.id_Reservas)}
                             >
@@ -124,8 +116,7 @@ export default class Terneras extends React.Component {
                         </UncontrolledDropdown>
                       </td>
               </tr>
-            );
-            )         
+            );         
                   </tbody>
                 </Table>
               </Card>
