@@ -84,11 +84,11 @@ export default class TernerasDestetadas extends React.Component {
                 <Table className="align-items-center table-flush" responsive>
                   <thead className="thead-light">
                     <tr>
-                      <th scope="col">Chapeta</th>
-                      <th scope="col">Tipo</th>
-                      <th scope="col">Bovino</th>
+                      <th scope="col">Nombre Paciente</th>
                       <th scope="col">Raza</th>
-                      <th scope="col">Finca</th>
+                      <th scope="col">Nombre dueño</th>
+                      <th scope="col">Telefono dueño</th>
+                      <th scope="col">Historia clinica</th>
                       <th scope="col">Acciones</th>
                     </tr>
                   </thead>
@@ -135,13 +135,6 @@ export default class TernerasDestetadas extends React.Component {
                             >
                                    <i className="ni ni-fat-remove" />
                              Eliminar
-                            </DropdownItem>
-                            <DropdownItem
-                            href="/admin/verGenealogia/"
-                            key={i} onClick={this.cargarInformacion.bind(this, Ternera)}
-                            >
-                            <i className="ni ni-map-big" />
-                             Ver Genealogia 
                             </DropdownItem>
                           </DropdownMenu>
                         </UncontrolledDropdown>

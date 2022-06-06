@@ -1,4 +1,5 @@
 import React from "react";
+import imagenes from '../../components/Headers/imagenes'
 
 
 import {
@@ -28,10 +29,7 @@ const Profile = () => {
                       <img
                         alt="..."
                         className="rounded-circle"
-                        src={
-                          require("../../assets/img/theme/Perfil.jpg")
-                            .default
-                        }
+                        src={imagenes.perfil}
                       />
                     </a>
                   </div>
@@ -61,9 +59,7 @@ const Profile = () => {
                   </div>
                   <hr className="my-4" />
                   <p>
-                    here more info,  here more info,  here more info, 
-                    here more info,  here more info, 
-                    here more info,  here more info, 
+                    ingresar aqui mucha mas informacion sobre el veterinario 
                   </p>
                   
                 </div>

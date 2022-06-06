@@ -64,6 +64,7 @@ export default class Terneras extends React.Component {
      localStorage.setItem("fechaInicio",Reservas.fechaInicio);
      localStorage.setItem("fechaFin",Reservas.fechaFin);
      localStorage.setItem("edit","si");
+     
   }
   
   render() {
@@ -81,6 +82,7 @@ export default class Terneras extends React.Component {
                       <th scope="col">Reserva</th>
                       <th scope="col">Fecha inicio</th>
                       <th scope="col">Fecha finalización</th>
+                      <th scope="col">Acciones</th>
                 
                     </tr>
                   </thead>
@@ -103,8 +105,16 @@ export default class Terneras extends React.Component {
                             onClick={(i) => i.preventDefault()}
                           >
                             <i className="fas fa-ellipsis-v" />
+                            
                           </DropdownToggle>
                           <DropdownMenu className="dropdown-menu-arrow" right>
+                          <DropdownItem
+                              href="/admin/actualizarBovino/"
+                              onClick={this.cargarInformacion.bind(this,Reservas)} 
+                            >
+                               <i className="ni ni-ui-04" />
+                              Actualizar
+                            </DropdownItem>
                         
                             <DropdownItem
                               onClick={() => this.eliminarReservas(Reservas.id_Reservas)}

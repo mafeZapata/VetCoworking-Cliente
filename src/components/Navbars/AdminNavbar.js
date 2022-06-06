@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import imagenes from "../Headers/imagenes.js";
 // reactstrap components
 import {
   DropdownMenu,
@@ -32,10 +33,7 @@ const AdminNavbar = (props) => {
                   <span className="avatar avatar-sm rounded-circle">
                     <img
                       alt="..."
-                      src={
-                        require("../../assets/img/theme/Perfil.jpg")
-                          .default
-                      }
+                       src={imagenes.perfil} 
                     />
                   </span>
                   <Media className="ml-2 d-none d-lg-block">

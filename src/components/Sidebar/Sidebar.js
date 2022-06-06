@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink as NavLinkRRD, Link } from "react-router-dom";
 import { PropTypes } from "prop-types";
+import imagenes from '../Headers/imagenes.js'
 
 
 import {
@@ -102,10 +103,7 @@ const Sidebar = (props) => {
                 <span className="avatar avatar-sm rounded-circle">
                   <img
                     alt="..."
-                    src={
-                      require("../../assets/img/theme/Perfil.jpg")
-                        .default
-                    }
+                    img src={imagenes.perfil} 
                   />
                 </span>
               </Media>

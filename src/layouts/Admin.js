@@ -7,7 +7,9 @@ import AdminNavbar from "../components/Navbars/AdminNavbar.js";
 import Sidebar from "../components/Sidebar/Sidebar.js";
 
 import routes from "../routes.js";
-import routes2 from "../routes2.js"
+import routes2 from "../routes2.js";
+
+import imagenes from "../components/Headers/imagenes.js";
 
 const Admin = (props) => {
   const mainContent = React.useRef(null);
@@ -53,11 +55,17 @@ const Admin = (props) => {
       <Sidebar
          logo={{
           innerLink: "/admin/index",
-          imgSrc: require("../assets/img/brand/logo.jpg").default,
-          imgAlt: "...",
+          imgSrc: <span className="avatar avatar-sm rounded-circle">
+                    <img
+                      alt="..."
+                       src={imagenes.logo} 
+                    />
+                  </span>,
+          imgAlt: "logo",
         }}
         {...props}
         routes={routes}
+        
         
       />
       <div className="main-content" ref={mainContent}>
