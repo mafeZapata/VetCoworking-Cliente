@@ -53,7 +53,7 @@ const Header = () => {
                           tag="h5"
                           className="text-uppercase text-muted mb-0"
                         >
-                          Pacientes
+                          Listado de pacientes
                         </CardTitle>
                         <img src={imagenes.clientes} alt="Clientes" style = {{ height:150, width: 150,}}/>
                       </div>
